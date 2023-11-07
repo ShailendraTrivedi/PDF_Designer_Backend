@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const { MONGO_DB, SERVER_PORT } = require("./constant");
+const { MONGO_DB, PORT } = require("./constant");
 const pdfRouter = require("./router/pdfRouter");
 const UesrRouter = require("./router/userRouter");
 const app = express();
@@ -29,6 +29,6 @@ mongoose
   });
 
 /** Server Connection  */
-app.listen(SERVER_PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server is running on port ${SERVER_PORT}`);
 });
