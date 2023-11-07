@@ -17,7 +17,7 @@ app.use("/pdf", pdfRouter);
 
 /** MongoDB Connection */
 mongoose
-  .connect(`${MONGO_DB}/Vidyalai`, {
+  .connect(`${MONGO_DB}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -30,5 +30,5 @@ mongoose
 
 /** Server Connection  */
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${SERVER_PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
