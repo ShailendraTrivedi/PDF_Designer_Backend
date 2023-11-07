@@ -17,10 +17,7 @@ app.use("/pdf", pdfRouter);
 
 /** MongoDB Connection */
 mongoose
-  .connect(`${MONGO_DB}`, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(`${MONGO_DB}`)
   .then(() => {
     console.log("Connected to MongoDB");
   })
